@@ -4,6 +4,7 @@
     padding: 0;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
+
 body {
     background: white;
     color: #24292f;
@@ -12,15 +13,18 @@ body {
     padding: 56px 24px 80px;
     text-align: center;
 }
+
 .hero {
     margin-bottom: 24px;
 }
+
 h1.title {
     font-size: 52px;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 16px;
 }
+
 .subtitle {
     max-width: 860px;
     margin: 0 auto 24px;
@@ -28,6 +32,7 @@ h1.title {
     font-size: 16px;
     line-height: 1.5;
 }
+
 .cta {
     display: inline-block;
     background: linear-gradient(rgb(61, 61, 61), black);
@@ -39,16 +44,15 @@ h1.title {
     margin-bottom: 44px;
 }
 
-
-
-.cards{
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     align-items: stretch;
     justify-content: center;
 }
-.card{
+
+.card {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -57,48 +61,75 @@ h1.title {
     padding: 20px;
     box-shadow: 0 10px 20px rgba(27, 31, 36, 0.5);
 }
+
+.recommended {
+    border: 2px solid #1f6feb;
+    padding: 16px;
+    background-color: #e7f1ff;
+    position: relative;
+}
+
+.recommended h2::after {
+    content: "RECOMMENDED";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1f6feb;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
 .price {
     margin-top: 20px;
     font-family: "Mona Sans";
     margin-bottom: 10px;
 }
-.pum {
 
+.pum {
     position: relative;
     top: -0.5em;
 }
+
 .price-num {
     font-size: 48px;
-    font-weight: 600;;
+    font-weight: 600;
 }
-.price sup{
+
+.price sup {
     color: rgb(130, 130, 130);
     font-family: "Mona Sans";
     font-size: 20px;
     position: relative;
     top: -0.9em;
-    padding-right:4px;
+    padding-right: 4px;
 }
-.price sub{
+
+.price sub {
     font-weight: 600;
     font-size: 20px;
     position: relative;
     top: -0.2em;
     padding: 0 5px;
 }
-.button a{
+
+.button a {
     text-decoration: none;
     display: block;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
+
 .button {
     display: flex;
     gap: 12px;
     align-items: center;
     width: 100%;
-  }
+}
+
 .black-button {
     display: inline-flex;
     align-items: center;
@@ -111,6 +142,7 @@ h1.title {
     color: white;
     margin-bottom: 44px;
 }
+
 .white-button {
     display: inline-flex;
     align-items: center;
@@ -125,9 +157,10 @@ h1.title {
     margin-bottom: 44px;
 }
 
-details { 
-    border: 0; 
+details {
+    border: 0;
 }
+
 .details-list {
     text-align: left;
     border-top: 1px solid #e5e7eb;
@@ -137,6 +170,7 @@ details {
     flex-direction: column;
     gap: 10px;
 }
+
 summary {
     list-style: none;
     cursor: pointer;
@@ -166,22 +200,24 @@ details[open] summary::before {
     font-size: 14px;
 }
 
-
 .addons {
     margin-top: 64px;
     text-align: center;
 }
+
 .addons h2 {
     font-size: 60px;
     font-weight: 800;
     margin-bottom: 24px;
 }
+
 .addon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 12px;
 }
+
 .addon-card {
     background: #fff;
     border: 1px solid #d0d7de;
@@ -191,10 +227,12 @@ details[open] summary::before {
     box-shadow: 0 4px 12px rgba(27, 31, 36, 0.08);
     transition: 0.3s ease;
 }
-.addon-card:hover{
+
+.addon-card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(27, 31, 36, 0.16);
 }
+
 .addon-icon {
     width: 40px;
     height: 40px;
@@ -207,19 +245,22 @@ details[open] summary::before {
     font-weight: 700;
     color: #1f6feb;
 }
+
 .addon-card h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .addon-card p {
     color: #57606a;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 12px;
 }
+
 .addon-card a {
-    color:black;
+    color: black;
     text-decoration: none;
     font-weight: 600;
 }
