@@ -1,0 +1,28 @@
+<div class="card">
+  <img class="img" [src]="product().image" [alt]="product().name" />
+
+  <h3 class="title">{{ product().name }}</h3>
+  <p class="desc">{{ product().description }}</p>
+
+  <p class="price"><b>Price:</b> {{ product().price }} ₸</p>
+
+  <div class="rating">
+    @for (s of stars(); track s) {
+      <span>{{ s <= product().rating ? '★' : '☆' }}</span>
+    }
+  </div>
+
+  <p class="likes"> ❤️ {{ product().likes }}</p>
+
+  <div class="actions">
+    <button (click)="like()">Like</button>
+    <button class="danger" (click)="onDelete()">Delete</button>
+  </div>
+
+  <a class="link" [href]="product().link" target="_blank">Open in Kaspi</a>
+
+  <div class="share">
+    <button (click)="shareWhatsApp()">WhatsApp</button>
+    <button (click)="shareTelegram()">Telegram</button>
+  </div>
+</div>

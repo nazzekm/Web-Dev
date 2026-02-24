@@ -85,13 +85,12 @@ h1 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
-
 .todo-item {
     display: flex;
     align-items: center;
-    padding: 20px 25px;
+    padding: 20px 15px;
     border-bottom: 1px solid #e8e8e8;
-    transition: background-color 0.2s;
+    transition: background-color;
 }
 
 .todo-item:hover {

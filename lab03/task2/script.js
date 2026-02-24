@@ -1,7 +1,7 @@
 const taskInput = document.getElementById('taskInput');
 const addButton = document.getElementById('addButton');
 const todoList = document.getElementById('todoList');
-
+const addErgent = document.getElementById('addErgent');
 
 if (todoList.children.length === 0) {
     todoList.innerHTML = '<div class="empty-state">No tasks yet. Add one above!</div>';
@@ -38,8 +38,8 @@ function createTaskElement(text) {
     deleteButton.addEventListener('click', function() {
         todoItem.remove();
 
-        if (todoList.children.length === 0) {
-            todoList.innerHTML = '<div class="empty-state">No tasks yet. Add one above!</div>';
+        if(todoList.children.length === 0) {
+            todoList.innerHTML = '<div class ="empty-state">No tasks yet. Add one above!</div>';
         }
     });
 
@@ -54,7 +54,7 @@ function addTask() {
     const taskText = taskInput.value.trim();
 
     if (taskText === '') {
-        alert('Please enter a task!');
+        alert('Is this task urgent?');
         return;
     }
 
