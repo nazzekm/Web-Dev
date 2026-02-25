@@ -9,36 +9,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, ProductListComponent],
-  template: `
-    <h2>Categories</h2>
-
-    <div class="cats">
-      @for (c of categories; track c.id) {
-        <button
-          class="cat"
-          [class.active]="selectedCategoryId === c.id"
-          (click)="selectCategory(c.id)"
-        >
-          {{ c.name }}
-        </button>
-      }
-    </div>
-
-    @if (selectedCategoryId === null) {
-      <p class="hint">Select a category to see products.</p>
-    } @else {
-      <app-product-list
-        [products]="filteredProducts"
-        (deleteProduct)="deleteFromCurrent($event)"
-      />
-    }
-  `,
-  styles: [`
-    .cats { display:flex; gap:10px; flex-wrap:wrap; padding: 10px 0; }
-    .cat { padding: 8px 12px; border-radius: 8px; border: 1px solid #ddd; cursor:pointer; background:#fff; }
-    .cat.active { background:#1976d2; color:#fff; border-color:#1976d2; }
-    .hint { color:#666; padding: 10px 0; }
-  `]
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
   categories: Category[] = [];
@@ -60,5 +32,15 @@ export class App {
   deleteFromCurrent(productId: number) {
     this.allProducts = this.allProducts.filter(p => p.id !== productId);
     this.filteredProducts = this.filteredProducts.filter(p => p.id !== productId);
+  }
+
+  getCategoryImage(id: number): string {
+    const map: Record<number, string> = {
+      1: 'https://resources.cdn-kaspi.kz/img/m/p/h37/ha8/86319883452446.jpg',
+      2: 'https://resources.cdn-kaspi.kz/img/m/p/p66/pf4/16710080.jpg',
+      3: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
+      4: 'https://resources.cdn-kaspi.kz/img/m/p/p23/p2d/37019409.png'
+    };
+    return map[id] ?? '';
   }
 }

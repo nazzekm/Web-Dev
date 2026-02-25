@@ -1,0 +1,84 @@
+.kaspi-header {
+  background: #fff;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.logo-text{
+  color: #e60023;
+  font-size: 24px;
+  font-weight: 700;
+}
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.store-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 28px 0 24px;
+}
+
+.hint {
+  text-align: center;
+  color: #666;
+  margin: 16px 0 0;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  padding: 0 24px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: #fff;                 
+  border-radius: 18px;
+  padding: 22px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.category-card:hover {
+  border-color: #1976d2;
+  box-shadow: 0 10px 24px rgba(25,118,210,0.18);
+  transform: translateY(-3px);
+}
+
+.category-card.active {
+  background: #1976d2;
+  border-color: #1976d2;
+}
+
+.category-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.category-card.active .category-name {
+  color: #fff;
+}
+
+.category-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
