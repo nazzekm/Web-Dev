@@ -40,6 +40,7 @@ export class App {
       2: 'https://resources.cdn-kaspi.kz/img/m/p/p66/pf4/16710080.jpg',
       3: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h07/84108189630494.jpg',
       4: 'https://resources.cdn-kaspi.kz/img/m/p/p23/p2d/37019409.png'
+      5: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPDC5mnOJTktdDR3u3ykxbtPI4OSM2Mx5-ag&s'
     };
     return map[id] ?? '';
   }

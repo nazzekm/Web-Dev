@@ -1,0 +1,21 @@
+<h2>Photos</h2>
+
+<a routerLink="/albums">← Back</a>
+
+<div *ngIf="isLoading">
+  <p>Loading...</p>
+</div>
+
+<div *ngIf="!isLoading">
+
+  <div *ngFor="let photo of photos">
+
+    <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+
+    <p>{{ photo.title }}</p>
+
+    <hr>
+
+  </div>
+
+</div>

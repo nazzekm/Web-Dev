@@ -12,10 +12,15 @@ import { Product } from '../../models/product.model';
 export class ProductItemComponent {
   product = input.required<Product>();
   delete = output<number>();
-
-  like() {
+  liked = false;
+  like(){
+    if(this.liked) return;
     this.product().likes++;
+    this.liked = true;
   }
+  /*like() {
+    this.product().likes++;
+  }*/
 
   onDelete() {
     if (confirm('Are you sure?')) {
